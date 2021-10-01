@@ -17,7 +17,8 @@ class MobileBankApiTestV5 {
                 .get("/demo/accounts")
                 .then()
                 .statusCode(200)
-                .contentType(ContentType.JSON)
+                // static import для JsonSchemaValidator.matchesJsonSchemaInClasspath
+                .body(matchesJsonSchemaInClasspath("accounts.schema.json"))
                 .body("every{ it.balance >= 0 }", is(true))
         ;
     }
