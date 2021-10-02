@@ -15,4 +15,4 @@ install:
   - java - jar .artifacts/app-mbank.jar &
 
 build_script:
-  - ./gradlew test --info # запускаем тест, флаг --info позволяет выводить больше информации
+  - echo Ubuntu build script --info # запускаем тест, флаг --info позволяет выводить больше информации
